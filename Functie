@@ -1,0 +1,42 @@
+#include "pch.h"
+#include <iostream>
+using namespace std;
+
+int suma(int n, int *sir)
+{
+	int Suma = 0;
+	for (int i = 0; i < n; i++)
+	{
+		Suma = Suma + sir[i];
+	}
+	return Suma;
+}
+
+int main()
+{
+	int n;
+	int i;
+	int *sir;
+	cout << "n=";
+	cin >> n;
+	sir = new int[n];
+	for (int i = 0;i < n;i++)
+	{
+		cout << "sir[" << i << "]=";
+
+		cin >> sir[i];
+	}
+
+	cout << "Sir:";
+	for (i = 0;i < n;i++)
+	{
+		cout<< sir[i] << " ";
+	}
+	
+	cout << endl;
+	cout << "Suma=" << suma(n, sir) << endl;
+
+	system("pause");
+	return 0;
+}
+
